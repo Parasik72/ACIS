@@ -1,0 +1,22 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.inputDate {
+    margin-top: 10px;
+    h4{
+        font-weight: 600;
+        color: $mainColor;
+    }
+    input{
+        margin-top: 5px;
+        padding: 5px;
+        border: 1px solid $mainColor;
+        border-radius: 3px;
+    }
+    .checkbox {
+        margin-left: 10px;
+    }
+    span{
+        margin-left: 5px;
+    }
+}

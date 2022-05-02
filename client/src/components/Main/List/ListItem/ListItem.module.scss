@@ -1,0 +1,21 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.item {
+    margin-top: 10px;
+    width: 100px;
+    border: 1px solid #000000;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    padding: 2px 10px;
+    transition: background-color 0.1s ease-in-out, 
+                border 0.1s ease-in-out,
+                color 0.1s ease-in-out;
+    cursor: pointer;
+    &:hover {
+        color: #fff;
+        background-color: $mainColor;
+        border: 1px solid $mainColor;
+    }
+}

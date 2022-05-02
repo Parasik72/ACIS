@@ -1,0 +1,17 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.navbar{
+    width: 100%;
+    height: 50px;
+    min-height: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba($color: #000000, $alpha: 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        color: $mainColor;
+        cursor: pointer;
+    }
+}

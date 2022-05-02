@@ -1,0 +1,34 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+    white-space: normal;
+    word-break: break-word;
+    td, th{
+        border: 1px solid #000;
+    }
+    td {
+        padding: 8px;
+    }
+    th {
+        padding: 4px;
+    }
+    &_body{
+        &_tr{
+            cursor: pointer;
+            transition: background-color 0.1s ease-in-out,
+                        color 0.1s ease-in-out;
+            &:hover{
+                background-color: $mainColor;
+                color: #fff;
+            }
+            span {
+                color: #ff0000;
+            }
+        }
+    }
+}

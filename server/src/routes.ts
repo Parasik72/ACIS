@@ -1,0 +1,47 @@
+import express from 'express';
+import { AreaBrigadeProductRouter } from './area-brigade-product/area-brigade-product.route';
+import { AreaRouter } from './area/area.route';
+import { AttributeRouter } from './attribute/attribute.route';
+import { BrigadeRouter } from './brigade/brigade.route';
+import { CompanyRouter } from './company/company.route';
+import { EmployeeAppointmentRouter } from './employee-appointment/employee-appointment.route';
+import { EmployeePositionRouter } from './employee-position/employee-position.route';
+import { EquipmentRouter } from './equipment/equipment.route';
+import { ManufactoryPolygonRouter } from './manufactory-polygon/manufactory-polygon.route';
+import { ManufactoryRouter } from './manufactory/manufactory.route';
+import { PersonRouter } from './person/person.route';
+import { PolygonRouter } from './polygon/polygon.route';
+import { PositionAttributeRouter } from './position-attribute/position-attribute.route';
+import { ProceduresFunctionsRouter } from './procedures-functions/procedures-functions.route';
+import { ProductCategoryRouter } from './product-category/product-category.route';
+import { ProductMovementAccountingRouter } from './product-movement-accounting/product-movement-accounting.route';
+import { ProductRouter } from './product/product.route';
+import { TestEmployeeAppointmentRouter } from './test-employee-appointment/test-employee-appointment.route';
+import { TestEquipmentRouter } from './test-equipment/test-equipment.route';
+import { TestRouter } from './test/test.route';
+
+export const Router = express();
+
+Router.use('/person', PersonRouter);
+Router.use('/employee-position', EmployeePositionRouter);
+Router.use('/company', CompanyRouter);
+Router.use('/manufactory', ManufactoryRouter);
+Router.use('/area', AreaRouter);
+Router.use('/brigade', BrigadeRouter);
+Router.use('/employee-appointment', EmployeeAppointmentRouter);
+Router.use('/product-category', ProductCategoryRouter);
+Router.use('/product', ProductRouter);
+Router.use('/attribute', AttributeRouter);
+Router.use('/polygon', PolygonRouter);
+Router.use('/test', TestRouter);
+Router.use('/equipment', EquipmentRouter);
+Router.use('/product-movement-accounting', ProductMovementAccountingRouter);
+Router.use('/area-brigade-product', AreaBrigadeProductRouter);
+Router.use('/procedures-functions', ProceduresFunctionsRouter);
+Router.use('/position-attribute', PositionAttributeRouter);
+Router.use('/test-employee-appointment', TestEmployeeAppointmentRouter);
+Router.use('/test-equipment', TestEquipmentRouter);
+Router.use('/manufactory-polygon', ManufactoryPolygonRouter);
+Router.use((req, res) => {
+    return res.status(404).json({message: 'The endpoint was not found!'});
+});

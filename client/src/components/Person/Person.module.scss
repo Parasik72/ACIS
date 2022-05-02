@@ -1,0 +1,33 @@
+$mainColor: #0066ff;
+$secondColor: #cacaca;
+
+.table{
+    min-height: calc(100vh - 125px);
+    &__header{
+        display: grid;
+        margin: 20px 0;
+        grid-template-columns: 0.9fr 3fr repeat(5, 1fr);
+        grid-template-areas: "opt name name name date space size";
+        border-bottom: 2px solid $mainColor;
+    }
+    &__name,
+    &__date,
+    &__size,
+    &__name{
+        grid-area: name;
+    }
+    &__date{
+        grid-area: date;
+    }
+    &__size{
+        grid-area: size;
+    }
+    &__empty{
+        height: calc(100vh - 300px);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
